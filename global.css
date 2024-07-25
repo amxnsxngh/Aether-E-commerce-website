@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 50%; 
+    background: radial-gradient(circle, rgba(36,0,94,0.5), rgba(36,0,94,0.5), rgba(0,0,0,0.5));
+    filter: blur(50px); 
+    z-index: -1; 
+  }
+
+  .header-main{
+    width:100%;
+    height: 60px;
+    background-color:rgb(0, 0, 0);
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .header-main-logo{
+    width: fit-content;
+    height: 100%; 
+    display: flex;
+    margin-left: 100px;
+
+  }
+
+  .header-main-logo img{
+    height: 60px ;
+    align-self: center;
+  }
+
+.header-main-nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 100px;
+  
+}
+
+.header-main-nav ul{
+  list-style: none;
+ 
+}
+  
+.header-main-nav ul li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.header-main-nav ul li:last-child {
+  margin-right: 0; 
+}
+
+.header-main-nav ul li a {
+  padding: 0 10px;
+  line-height: 60px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+
+.header-main-nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start from the middle of the text */
+  transform: translateX(-50%); /* Center the line under the text */
+  width: 0; 
+  height: 3px;
+  background-color: rgb(98, 0, 255); 
+  transition: width 0.5s ease; 
+}
+
+.header-main-nav ul li a:hover::after {
+  width: 100%; 
+}
+
+.header-main-nav h1 {
+  margin: 0;
+  display: inline-block; /* Ensure the h1 is treated as inline-block to properly center it */
+  position: relative;
+}
+
+.header-main-nav h1 a {
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff; 
+  text-align: center; 
+  text-decoration: none;
+}
+
+.header-main-nav h1 a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 0; 
+  height: 3px;
+  background-color: rgb(98, 0, 255); 
+  transition: width 0.5s ease; 
+  
+}
+
+.header-main-nav h1 a:hover::after {
+  width: 100%; 
+}
+
+

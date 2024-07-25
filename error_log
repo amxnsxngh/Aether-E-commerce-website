@@ -1,0 +1,1 @@
+[19-Jun-2024 09:39:25 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/amansezm/public_html/order_confirmation.php on line 82
